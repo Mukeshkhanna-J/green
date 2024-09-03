@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/style_4.css" />
+        <title>
+          GREENEARTH
+        </title>
+        <link rel="icon" href="../fertilizer.png" type="icon">
+    </head>
+<div class="container">  
+    <form id="contact" action="" method="post">
+      <h3>Enquiry form</h3>
+      <h4>Contact us for custom quote</h4>
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <textarea id="msg" placeholder="Type your message here...." tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button class="qr-link" type="submit" href="qrcodehasgenerated.jpg">submit</a>
+
+    </form>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Login form submission 
+      document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector('input[type="text"]').value;
+        const email = document.querySelector('input[type="email"]').value;
+        const msg = document.querySelector('#msg').value;
+        fetch('http://localhost:3000/enquiry', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email,msg })
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data) {
+              alert('enquiry sent!');
+              // Handle successful login, e.g., redirect or store token
+            } else {
+              alert('enquiry failed: ' + data.message);
+            }
+          })
+          .catch(error => console.error('Error:', error));
+      });
+    });
+
+      // Register form submission
+      document.querySelector('#registerForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+    });
+  </script></html>

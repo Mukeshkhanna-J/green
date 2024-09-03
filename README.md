@@ -1,0 +1,2 @@
+# greenearth
+Green Earth is a website that specializes in selling environmentally friendly fertilizers and gardening products. They offer a wide range of organic fertilizers, compost, soil amendments, and other products that promote sustainable gardening practices. Green Earth's mission is to provide gardeners with high-quality products that help nourish plants while minimizing harm to the environment. Customers can find a variety of options to support their gardening needs while also contributing to a healthier, greener Earth.

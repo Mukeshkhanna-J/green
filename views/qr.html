@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<style>
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.scan-me {
+  font-family: time new roman;
+  font-size: 4em;
+  margin-bottom: 100px;
+}
+
+img {
+            max-width: 100%; /* Ensures the image does not exceed its container's width */
+            height: auto; /* Maintains the aspect ratio of the image */
+            display: block; /* Ensures there's no extra space below the image */
+            margin: 0 auto; /* Centers the image horizontally */
+            border: 2px solid #007bff; /* Adds a border around the image */
+            border-radius: 8px; /* Rounds the corners of the border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+        }
+.description {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+
+.logo {
+  margin-top: 30px;
+  background-color: white;
+  color: #004aad;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="scan-me">SCAN ME</div>
+  <img src=“qrcodehasgenerated.jpg” alt="QR Code">
+
+  <div class="description">Scan this QR code for further more details about your order</div>
+</div>
+</body>
+</html>
